@@ -1,0 +1,4 @@
+.*
+tests/
+coverage/
+jsdoc2md/

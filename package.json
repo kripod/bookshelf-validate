@@ -1,0 +1,32 @@
+{
+  "name": "bookshelf-validate",
+  "version": "1.0.0",
+  "description": "Validation for the Model objects of Bookshelf.js",
+  "author": {
+    "name": "Kristóf Poduszló"
+  },
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "./lib"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "devDependencies": {
+    "eslint": "^1.10.3"
+  },
+  "keywords": [
+    "bookshelf",
+    "validate",
+    "validator",
+    "valid"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kripod/bookshelf-validate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kripod/bookshelf-validate/issues"
+  },
+  "license": "MIT"
+}

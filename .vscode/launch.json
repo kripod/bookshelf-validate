@@ -1,0 +1,11 @@
+{
+  "version": "0.0.0",
+  "configurations": [
+    {
+      "name": "Launch example",
+      "type": "node",
+      "request": "launch",
+      "program": "example/index.js"
+    }
+  ]
+}
