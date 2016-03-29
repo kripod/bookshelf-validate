@@ -15,7 +15,7 @@ loader of Bookshelf.
 ``` js
 var validator = require('validator');
 
-validator.extend('isPrime', function (str) {
+validator.isPrime = function (str) {
   var value = parseInt(str);
   if (value === NaN || value < 2) return false;
 
@@ -24,7 +24,7 @@ validator.extend('isPrime', function (str) {
       return false;
     }
   }
-});
+};
 
 bookshelf.plugin('bookshelf-validate', validator);
 ```
