@@ -35,7 +35,7 @@ by a `validationErrors()` method, which can be executed at will.
 ``` js
 var User = bookshelf.Model.extend({
   tableName: 'users',
-  validation: {
+  validations: {
     // Username is required, and its length must be between 2 and 32 characters
     username: { isRequired: true, isLength: [2, 32] },
 
