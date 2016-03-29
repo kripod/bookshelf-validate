@@ -15,7 +15,7 @@ loader of Bookshelf.
 ``` js
 var validator = require('validator');
 
-validator.extend('isPrime', function (str) {
+validator.isPrime = function (str) {
   var value = parseInt(str);
   if (value === NaN || value < 2) return false;
 
@@ -24,7 +24,7 @@ validator.extend('isPrime', function (str) {
       return false;
     }
   }
-});
+};
 
 bookshelf.plugin('bookshelf-validate', validator);
 ```
@@ -35,7 +35,7 @@ by a `validationErrors()` method, which can be executed at will.
 ``` js
 var User = bookshelf.Model.extend({
   tableName: 'users',
-  validation: {
+  validations: {
     // Username is required, and its length must be between 2 and 32 characters
     username: { isRequired: true, isLength: [2, 32] },
 
