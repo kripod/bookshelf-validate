@@ -5,6 +5,10 @@
   "author": {
     "name": "Kristóf Poduszló"
   },
+  "contributors": [{
+    "name": "Edward Greve",
+    "email": "edward.greve@gmail.com"
+  }],
   "files": [
     "lib/"
   ],
