@@ -4,29 +4,27 @@
 
 Validation for the Model objects of Bookshelf.js
 
-## Documentation
-
-### Installation
+## Installation
 
 ```
 npm install --save bookshelf-validate
 ```
 
-### Configuration
+## Configuration
 
-To initialize the plugin, call `bookshelf.plugin('bookshelf-validate'[, config]);` with your
-bookshelf instance.
+To initialize the plugin, call `bookshelf.plugin('bookshelf-validate'[, config]);`
+with your Bookshelf instance.
 
 The `config` object is optional, and the defaults are:
 
 ```js
 {
   validator: require('validator'), // node-validator
-  validateOnSave: false // Automatically validate when bookshelf emits 'saving' event
+  validateOnSave: false // Automatically validate when Bookshelf emits 'saving' event
 }
 ```
 
-#### config.validator
+### config.validator
 
 By default, the validation methods are provided by the __validator__ npm package.
 
@@ -56,28 +54,28 @@ bookshelf.plugin('bookshelf-validate', {
 });
 ```
 
-#### config.validateOnSave
+### config.validateOnSave
 
-If `validateOnSave: true`, the validations will automatically be called
-when bookshelf emits a `'saving'` event. If any validations fail, an
+If `validateOnSave` is `true`, the validations will automatically be called
+when Bookshelf emits a `'saving'` event. If any validations fail, an
 error will be thrown and the model will not be saved.
 
-### API
+## API
 
-#### 'isRequired'
+### 'isRequired'
 
 Since `node-validator` does not look at undefined or null values, an optional
 validator `isRequired` is provided with the library. It is off by default.
 
-#### Model.validations
+### Model.validations
 
 To use `bookshelf-validator` in your models, you must add a `validations`
-key to your bookshelf model. Each key of the `validations` object must be
-an attribute of the bookshelf model. There are four ways to write the
+key to your Bookshelf model. Each key of the `validations` object must be
+an attribute of the Bookshelf model. There are four ways to write the
 validations for each attribute, depending on the level of specifity you need
 to provide.
 
-##### Option 1: Validation method name as string
+#### Option 1: Validation method name as string
 
 ```js
 var User = bookshelf.Model.extend({
@@ -87,7 +85,7 @@ var User = bookshelf.Model.extend({
 });
 ```
 
-##### Option 2: Validation method name as key in object
+#### Option 2: Validation method name as key in object
 
 With this option, the values of the validation method name keys will be passed
 to the validation methods as arguments. An array of values may be passed
@@ -105,7 +103,7 @@ var User = bookshelf.Model.extend({
 ```
 
 
-##### Option 3: Validation method with custom error message
+#### Option 3: Validation method with custom error message
 
 With this option, if the validation fails, your custom error message will be
 returned instead of the default (the name of the method which failed validation).
@@ -125,7 +123,7 @@ var User = bookshelf.Model.extend({
 
 The `error` and `args` attributes are optional.
 
-##### Option 4: An array with a combination of any of the above
+#### Option 4: An array with a combination of any of the above
 
 For more complicated validations, you may pass an array that has a combination
 of strings and objects. If an object has an attribute called `method` it will be
@@ -145,7 +143,7 @@ var User = bookshelf.Model.extend({
 });
 ```
 
-#### Model#validationErrors
+### Model#validationErrors
 
 Call `validationErrors()` on a model instance to see the results of your validation.
 
@@ -209,8 +207,8 @@ console.log(errors);
 /*
 ```
 
-And, if `validateOnSave: true`:
+And, if `validateOnSave` is `true`:
 
 ```js
-user.save(); // ValidationError
+user.save(); // Throws a ValidationError
 ```

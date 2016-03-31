@@ -1,9 +1,10 @@
 {
   "name": "bookshelf-validate",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Validation for the Model objects of Bookshelf.js",
   "author": {
-    "name": "Kristóf Poduszló"
+    "name": "Kristóf Poduszló",
+    "email": "kripod@protonmail.com"
   },
   "contributors": [{
     "name": "Edward Greve",
