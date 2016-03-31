@@ -1,0 +1,13 @@
+{
+  "extends": "airbnb/legacy",
+  "rules": {
+    "max-len": ["error", 80],
+    "valid-jsdoc": ["error", {
+      "prefer": {
+        "return": "returns"
+      },
+      "requireReturn": false,
+      "requireReturnDescription": false
+    }]
+  }
+}

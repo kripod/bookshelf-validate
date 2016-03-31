@@ -5,6 +5,9 @@
   "author": {
     "name": "Kristóf Poduszló"
   },
+  "files": [
+    "lib/"
+  ],
   "main": "lib/index.js",
   "directories": {
     "lib": "./lib"
@@ -13,7 +16,8 @@
     "node": ">=4"
   },
   "devDependencies": {
-    "eslint": "^1.10.3"
+    "eslint": "^2.5.3",
+    "eslint-config-airbnb": "^6.2.0"
   },
   "keywords": [
     "bookshelf",
