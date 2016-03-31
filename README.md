@@ -147,10 +147,10 @@ var User = bookshelf.Model.extend({
 
 #### Model#validationErrors
 
-Call `validationErrors()` to see the results of your validation.
+Call `validationErrors()` on a model instance to see the results of your validation.
 
 If there are any invalid attributes on your model, the result will be a
-ValidationError object containing an object of attributes and their errors on
+`ValidationError` object containing an object of attributes and their errors on
 the `data` property.
 
 If the `validateOnSave: true` option was configured, `validationErrors()` will
@@ -199,7 +199,7 @@ var user = new User({
 let errors = user.validationErrors();
 console.log(errors);
 /*
-  [AttributeError]:
+  [ValidationError]:
   {
     data: {
       username: ['Username must be between 2 and 32 characters'],
