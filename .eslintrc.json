@@ -1,13 +1,10 @@
 {
-  "extends": "airbnb/base",
+  "extends": "airbnb-base",
   "rules": {
-    "max-len": ["error", 80],
-    "valid-jsdoc": ["error", {
-      "prefer": {
-        "return": "returns"
-      },
-      "requireReturn": false,
-      "requireReturnDescription": false
-    }]
+    "import/no-extraneous-dependencies": 0,
+    "import/no-unresolved": 0,
+    "no-prototype-builtins": 0,
+    "no-restricted-syntax": 0,
+    "prefer-spread": 0
   }
 }

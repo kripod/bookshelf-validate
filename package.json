@@ -23,8 +23,9 @@
     "node": ">=4"
   },
   "devDependencies": {
-    "eslint": "^2.5.3",
-    "eslint-config-airbnb": "^6.2.0"
+    "eslint": "^3.12.1",
+    "eslint-config-airbnb-base": "^11.0.0",
+    "eslint-plugin-import": "^2.2.0"
   },
   "keywords": [
     "bookshelf",
