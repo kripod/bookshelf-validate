@@ -1,6 +1,6 @@
 {
   "name": "bookshelf-validate",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Validation for the Model objects of Bookshelf.js",
   "author": {
     "name": "Kristóf Poduszló",
