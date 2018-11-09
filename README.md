@@ -96,7 +96,7 @@ var User = bookshelf.Model.extend({
   validations: {
     username: {
       isRequired: true,
-      isLength: [2, 32] // will call validator.isLength(value, 2, 32)
+      isLength: { min: 2, max: 32 } // will call validator.isLength(value, { min: 2, max: 32 })
     }
   }
 });
@@ -115,7 +115,7 @@ var User = bookshelf.Model.extend({
     username: {
       method: 'isLength',
       error: 'Your username must be between 4 and 32 characters long.',
-      args: [4, 32]
+      args: { min: 4, max: 32 }
     }
   }
 });
@@ -137,7 +137,7 @@ var User = bookshelf.Model.extend({
     email: [
       'isRequired',
       { isEmail: {allow_display_name: true} }, // Options object passed to node-validator
-      { method: 'isLength', error: 'Username 4-32 characters long.', args: [4, 32] } // Custom error message
+      { method: 'isLength', error: 'Username 4-32 characters long.', args: { min: 4, max: 32 } } // Custom error message
     ]
   }
 });
@@ -174,7 +174,7 @@ var User = bookshelf.Model.extend({
     // Username is required, and its length must be between 2 and 32 characters
     username: [
       'isRequired',
-      { method: 'isLength', error: 'Username must be between 2 and 32 characters.', args: [2, 32] }
+      { method: 'isLength', error: 'Username must be between 2 and 32 characters.', args: { min: 2, max: 32 } }
     ],
 
     // Email is required, and must be a valid e-mail address
